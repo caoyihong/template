@@ -28,4 +28,9 @@ public class TestUserService {
         userInfo.setTelephone("13128812643");
         userService.insertUser(userInfo);
     }
+    @Test
+    public void testGetUserById(){
+        UserInfo userInfo = userService.getUserById(1l);
+        System.out.println(userInfo.getUserName() + "---" + userInfo.getTelephone());
+    }
 }
